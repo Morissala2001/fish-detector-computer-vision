@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# The dataset and the trained weights are never committed: the dataset is downloaded from Kaggle
+# and the weights are produced by `fishdet train`.
+data/
+models/
+*.pt
+*.pth
+*.safetensors
+
+# Your own photos and local reports
+photos/
+runs/

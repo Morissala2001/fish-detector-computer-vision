@@ -1,0 +1,37 @@
+[project]
+name = "fish-detector"
+version = "0.1.0"
+description = "Detect and name aquarium fish in photos: a pre-trained Faster R-CNN fine-tuned on 13 species, with evaluation, CLI and web app."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Morissala2001" }]
+dependencies = [
+    "kagglehub>=1.0",
+    "numpy>=2.0",
+    "pillow>=11.0",
+    "pycocotools>=2.0.11",
+    "torch>=2.11",
+    "torchmetrics>=1.9",
+    "torchvision>=0.26",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.65"]
+
+[project.scripts]
+fishdet = "fishdet.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fishdet"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
