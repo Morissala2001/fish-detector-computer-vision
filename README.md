@@ -1,5 +1,7 @@
 # 🐠 Fish detector
 
+[![tests](https://github.com/Morissala2001/fish-detector-computer-vision/actions/workflows/tests.yml/badge.svg)](https://github.com/Morissala2001/fish-detector-computer-vision/actions/workflows/tests.yml)
+
 *Detect the fish in an aquarium photo and name their species.*
 
 A pre-trained object detector (Faster R-CNN) fine-tuned on 13 aquarium species. Given a photo, it answers two questions for every fish: **where is it** (a box) and **which species is it**. The project has a **web app** (drop a photo, see the boxes), a **CLI** (`fishdet`) and a small **library** (`src/fishdet`) with a built-in evaluation.
