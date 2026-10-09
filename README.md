@@ -4,6 +4,9 @@
 
 *Detect the fish in an aquarium photo and name their species.*
 
+![Demo: angelfish, clownfish and gouramis outlined and named](docs/demo.gif)
+<sub>Three test photos, never seen in training, among those where every fish is found. The measured scores and the limits are below. Photos: Fish dataset, CC BY 4.0.</sub>
+
 A pre-trained object detector (Faster R-CNN) fine-tuned on 13 aquarium species. Given a photo, it answers two questions for every fish: **where is it** (a box) and **which species is it**. The project has a **web app** (drop a photo, see the boxes), a **CLI** (`fishdet`) and a small **library** (`src/fishdet`) with a built-in evaluation.
 
 Why a detector and not a classifier? A photo of an aquarium rarely shows one fish. The detector found in the COCO dataset knows 91 everyday categories and no fish at all: on a close-up goldfish it sees a *bird* with 98% confidence. Fine-tuning teaches it the new species while keeping what it already knows about finding objects.
